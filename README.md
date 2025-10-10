@@ -52,12 +52,12 @@ A full-stack Task Manager application built with Node.js, Express, React, and Do
 Before you begin, ensure you have the following installed:
 
 - **Docker** (version 20.10 or higher)
-- **Docker Compose** (version 1.29 or higher)
+- **Docker Compose** (version 1.29 or higher, v2 recommended)
 
 To check if you have Docker installed:
 ```bash
 docker --version
-docker-compose --version
+docker compose version
 ```
 
 If you don't have Docker installed, visit [Docker Installation Guide](https://docs.docker.com/get-docker/).
@@ -72,7 +72,7 @@ git clone <repository-url>
 cd github-slideshow
 
 # Start the application
-docker-compose up --build
+docker compose up --build
 ```
 
 That's it! The application will be available at:
@@ -81,7 +81,7 @@ That's it! The application will be available at:
 
 To stop the application:
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ## 📖 Setup and Installation
@@ -98,12 +98,12 @@ This is the simplest method and recommended for most users.
 
 2. **Build and start the services**
    ```bash
-   docker-compose up --build
+   docker compose up --build
    ```
 
    The `--build` flag ensures Docker builds the images. On subsequent runs, you can omit it:
    ```bash
-   docker-compose up
+   docker compose up
    ```
 
 3. **Access the application**
@@ -158,19 +158,19 @@ If you want to run the application without Docker for development:
 
 ```bash
 # Start in foreground (see logs)
-docker-compose up
+docker compose up
 
 # Start in background (detached mode)
-docker-compose up -d
+docker compose up -d
 
 # View logs
-docker-compose logs -f
+docker compose logs -f
 
 # Stop the application
-docker-compose down
+docker compose down
 
 # Rebuild and start (after code changes)
-docker-compose up --build
+docker compose up --build
 ```
 
 ### Without Docker
@@ -380,11 +380,11 @@ If Docker build fails:
 
 ```bash
 # Clean up Docker resources
-docker-compose down -v
+docker compose down -v
 docker system prune -a
 
 # Rebuild from scratch
-docker-compose up --build
+docker compose up --build
 ```
 
 ### Frontend Not Loading
@@ -392,7 +392,7 @@ docker-compose up --build
 If the frontend doesn't load:
 
 1. Check if the container is running: `docker ps`
-2. View logs: `docker-compose logs frontend`
+2. View logs: `docker compose logs frontend`
 3. Try accessing http://localhost:3000 directly in your browser
 4. Clear browser cache and try again
 
