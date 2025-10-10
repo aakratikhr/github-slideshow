@@ -1,0 +1,16 @@
+{
+  "name": "github-slideshow-frontend",
+  "version": "1.0.0",
+  "description": "Frontend application for GitHub Slideshow",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 8080 -c-1",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": ["slideshow", "frontend", "github"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
