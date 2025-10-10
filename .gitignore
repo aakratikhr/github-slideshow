@@ -2,3 +2,29 @@ _site/
 .sass-cache/
 .jekyll-metadata
 .bundle
+
+# Node modules
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build artifacts
+backend/coverage/
+frontend/build/
+frontend/coverage/
+
+# Environment files
+**/.env
+**/.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
